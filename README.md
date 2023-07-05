@@ -94,3 +94,8 @@ plt.yticks([0, 2, 4, 6, 8, 10],
 
 plt.show()
 ```
+
+### Dictionary
+
+list_name = { "key_1":1, "key_2",2 } # Key value pairs
+list_name["key_1"]
