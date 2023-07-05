@@ -38,6 +38,33 @@ Tip: [Python For Data Science Cheat Sheet](https://res.cloudinary.com/dyd911kmh/
 
 To change the x-axis to a logarithmic scale, just ```plt.xscale('log')```. 
 
+Next code gives colors to the dots while using a graph such as scatter:
+
+```py
+dict = {
+    'Asia':'red',
+    'Europe':'green',
+    'Africa':'blue',
+    'Americas':'yellow',
+    'Oceania':'black'
+}
+
+# Specify c and alpha inside plt.scatter()
+plt.scatter(x = gdp_cap, y = life_exp, s = np.array(pop) * 2, c=col)
+# I could also add the parameter alpha=0.8 to change opacity of the bubbles
+```
+
+I can also add other customizations such as:
+
+```py
+# Additional customizations
+plt.text(1550, 71, 'India') # x-axis location, y-axis location, text
+plt.text(5700, 80, 'China')
+
+# Add grid() call
+plt.grid(true)
+```
+
 ### Histogram 
 
 Helps to get idea about distribution. X-axis are for the bins and it defines the number of equal-width bins in the range. Bins has a default value of 10.
@@ -54,3 +81,16 @@ plt.show()
 
 * To show the bins on Y-axis use ```?```.
 * ```plt.clf()``` Clean the current figure.
+
+```py
+plt.plot(x_axis, y_axis)
+
+plt.xlabel(´X-axis Label`) 
+plt.ylabel(´Y-axis Label`) 
+plt.title(´Title of the Plot`)
+plt.yticks([0, 2, 4, 6, 8, 10]) # Gives the values that will appear on Y-axis
+plt.yticks([0, 2, 4, 6, 8, 10],
+	   [´0´, ´2B´, ´4B´, ´6B´, ´8B´, ´10B´]) # This way, it will give the names fot the Y-axis
+
+plt.show()
+```
