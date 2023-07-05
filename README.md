@@ -97,5 +97,7 @@ plt.show()
 
 ### Dictionary
 
+```py
 list_name = { "key_1":1, "key_2",2 } # Key value pairs
 list_name["key_1"]
+```
