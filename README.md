@@ -98,6 +98,34 @@ plt.show()
 ### Dictionary
 
 ```py
-list_name = { "key_1":1, "key_2",2 } # Key value pairs
-list_name["key_1"]
+dict_name = { "key_1":1, "key_2",2 } # Key value pairs
+dict_name["key_1"]
+
+print(dict_name.keys()) # To print out all the key values
+dict_name["key_3"] = 3 # To add more data to a dictionary
+"key_3" in dict_name # To check if a key exists inside the list
+dict_name["key_3"] = 4 # To change a value
+del(dict_name["key_3"]) # To delete a key value pair
+```
+Dictionaries can contain other disctionaries inside (values are again dictionaries).
+
+```py
+# Dictionary of dictionaries
+europe = { 'spain': { 'capital':'madrid', 'population':46.77 },
+           'france': { 'capital':'paris', 'population':66.03 },
+           'germany': { 'capital':'berlin', 'population':80.62 },
+           'norway': { 'capital':'oslo', 'population':5.084 } }
+
+print(europe['spain']['population']) # to show the population of spain
+```
+
+To add more data (as sub-dictionaries) on the europe dictionary, just:
+
+```py
+# Create sub-dictionary data
+data = {'capital':'rome','population':59.83}
+
+# Add data to europe under key 'italy'
+europe['italy'] = data
+
 ```
