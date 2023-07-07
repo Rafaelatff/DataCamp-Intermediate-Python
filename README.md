@@ -174,3 +174,64 @@ Now, when we have index names on our csv file, we need to pass the ```index_col`
 ```py
 DataFrame_name = pd.read_csv("path/to/file_name.csv", index_col=0)
 ```
+
+Now let's index and select data. 
+
+To print the whole column:
+
+```py
+print(DataFrame_name["Column2"])
+```
+
+But this, will return a dtype name object. If I type ```type(DataFrame_name["Column2"]``` it will retur as ```pandas.core.series.Series```.
+
+To return the data and keep the data in a DataFrame format, we need to use double square brackets.
+
+```py
+print(DataFrame_name[["Column2"]])
+```
+
+Then when we check its type by ```type(DataFrame_name["Column2"]``` it will retur ```pandas.core.series.DataFrame```.
+
+I can then use more columns by:
+
+```py
+print(DataFrame_name[["Column2", "Column3"]])
+```
+
+I can select the rows by using the index.
+
+```py
+print(DataFrame_name[1:3]) # index starts in 0, so we will print rows 2 to 4
+```
+
+In pandas we have:
+
+* ```loc``` as label-based.
+* ```iloc``` as integer position-based.
+
+To use get a row using index with names:
+
+```py
+DataFrame_name.loc[["NameRow5"]] # Two brackets to retur DataFrame format
+DataFrame_name.iloc[[4]] # Same result but using iloc
+```
+
+Now to get only a few rows and columns:
+
+```py
+DataFrame_name.loc[["NameRow4", "NameRow5"], ["Column1", "Column2"]] 
+DataFrame_name.iloc[[3, 4], [0, 1]] # Same result but using iloc
+```
+
+To get all rows I could simply use:
+
+```py
+DataFrame_name.loc[:, ["Column1", "Column2"]] 
+DataFrame_name.iloc[:, [0, 1] # Same result but using iloc
+```
+
+### Comparison Operators
+
+For strings, it gets according to alphabel: 'rafaela' < 'amanda' ? The answer is False.
+Comparators works same way as in C.
