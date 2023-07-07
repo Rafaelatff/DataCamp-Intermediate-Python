@@ -129,3 +129,48 @@ data = {'capital':'rome','population':59.83}
 europe['italy'] = data
 
 ```
+
+## Pandas
+
+Pandas is an open source library, providing high-performance, easy-to-use data structures and data analysis tools for Python.
+To use Pandas, we have to import its package first.
+
+```py
+import pandas as pd
+```
+
+### Creating a DataFrame
+
+Pandas has advantages over Numpy, once Pandas handles better different data types in a single variable.
+It creates a DataFrame.
+
+We can create a DataFrame from a Dictionary.
+
+```py
+dict_name = { 
+	"Column1":["Value10", "Value01", "Value02", "Value03"],
+	"Column2":["Value20", "Value21", "Value22", "Value23"],
+	"Column3":[30, 31, 32, 33] }
+
+DataFrame_name = pd.DataFrame(dict_name)
+```
+
+Pandas automatict assigns row names (0 and forward), we can change that by adding index name to it:
+
+```py
+DataFrame_name.index = ["NameRow1", "NameRow2", "NameRow3", "NameRow4", "NameRow5"]
+```
+
+### Reading a DataFrame
+
+We can read csv files using that! 
+
+```py
+DataFrame_name = pd.read_csv("path/to/file_name.csv")
+```
+
+Now, when we have index names on our csv file, we need to pass the ```index_col``` argument. Let's do it:
+
+```py
+DataFrame_name = pd.read_csv("path/to/file_name.csv", index_col=0)
+```
