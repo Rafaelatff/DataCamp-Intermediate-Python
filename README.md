@@ -231,6 +231,23 @@ DataFrame_name.loc[:, ["Column1", "Column2"]]
 DataFrame_name.iloc[:, [0, 1] # Same result but using iloc
 ```
 
+## Comparison Operatos
+
+Same as C, ==, >=, <=, !=.
+
+```py
+DataFrame_name["area"] # Get pandas series to analize
+
+is_huge = DataFrame_name["area"] > 8 # Compare each value from the serie to >8
+
+# To show info about itens that are greate than 8, just
+print(DataFrame_name[is_huge]
+
+# Or, I can simply:
+
+print(DataFrame_name[DataFrame_name["area"] > 8]])
+```
+
 ## Boolean Operators
 
 * ``` x > 5 and x < 15``` for AND operator.
@@ -239,6 +256,11 @@ DataFrame_name.iloc[:, [0, 1] # Same result but using iloc
 * ``` logical_or(y > 1, y < -5) ``` NumPy equivalent for OR.
 * ``` not False ``` for NOT operator.
 * ``` logical_not(False) ``` NumPy equivalent for NOT.
+
+Note: Once Pandas is created based on NumPy packet, it is possible to use the boolean operators also.
+
+* ``` np.logical_and(DataFrame_name["area"] > 8], DataFrame_name["area"] < 100]) ```
+* ``` DataFrame_name[np.logical_and(DataFrame_name["area"] > 8], DataFrame_name["area"] < 100])] ```
 
 ## Conditional Operators
 
