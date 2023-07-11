@@ -384,3 +384,20 @@ fot x in range(4):
 	pass # for loops cannot be empty, the pass statement to avoid getting an error
 
 ```
+
+## random
+
+There are a lot of methods to use within the random packet. Here are listed 3 that called my attention:
+
+* ```randrange()``` # Returns a random number between the given range.
+* ```randint()``` # Returns a random number between the given range.
+* ```random()``` # Returns a random float number between 0 and 1.
+
+```py
+import random
+
+values = np.random.randint(-10,10,1000) # Lower limit, Upper limit, number of values : <class 'numpy.ndarray'>
+
+print('Mean: ' + str(np.float64(np.mean(values)))) # It returns a <numpy.float64> type, then is converted to string
+print('Standard deviation: ' + str(np.float64(np.std(values)))) # Same as before
+```
