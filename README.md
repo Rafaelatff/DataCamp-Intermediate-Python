@@ -231,6 +231,55 @@ DataFrame_name.loc[:, ["Column1", "Column2"]]
 DataFrame_name.iloc[:, [0, 1] # Same result but using iloc
 ```
 
+## Boolean Operators
+
+* ``` x > 5 and x < 15``` for AND operator.
+* ``` logical_and(x > 5, x < 15) ``` NumPy equivalent for AND.
+* ``` y > 1 or y < -5``` for OR operator.
+* ``` logical_or(y > 1, y < -5) ``` NumPy equivalent for OR.
+* ``` not False ``` for NOT operator.
+* ``` logical_not(False) ``` NumPy equivalent for NOT.
+
+## Conditional Operators
+
+### if
+
+```py
+if condition :
+	expression
+	# to continue the if, just use 4 spaces or tab
+
+z = 4
+if z % 2 == 0 : # True
+	print("z is even")
+```
+
+### else
+
+```py
+if condition :
+	expression
+else :
+	expression
+
+z = 5
+if z % 2 == 0 : # True
+	print("z is even")
+else : 
+	print("z is odd")
+```
+
+### elif
+
+```py
+if condition : 
+	expression
+elif condition :
+	expression
+else : 
+	expression
+```
+
 ### Comparison Operators
 
 For strings, it gets according to alphabel: 'rafaela' < 'amanda' ? The answer is False.
