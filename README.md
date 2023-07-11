@@ -338,3 +338,49 @@ areas = [11.25, 18.0, 20.0, 10.75, 9.50]
 for a, area in enumerate(areas) :
     print("room " + str(a) + ": " + str(area))
 ```
+
+### More about the for loop
+
+The for loop does not require an indexing variable to set beforehand.
+
+```py
+fruits = ["apple", "banana", "cherry"]
+for x in fruits:
+	print(x)
+	if x == "banana":
+		break
+```
+
+Looping Through a String:
+
+```py
+for x in "banana":
+	print(x)
+```
+
+Do not print banana:
+
+```py
+fruits = ["apple", "banana", "cherry"]
+for x in fruits:
+	if x == "banana":
+		continue
+	print(x)
+```
+
+The range() function returns a sequence of numbers, starting from 0 by default, and increments by 1 (by default), and ends at a specified number.
+
+```py
+for x in range(6): # Goes from 0 to 6, with 1 of increment
+	print(x)
+
+for x in range(2, 6): # Goes from 2 to 6, with 1 of increment
+	print(x)
+
+for x in range(2, 30, 3): # Goes from 2 to 30, with 3 of increment
+	print(x)
+
+fot x in range(4):
+	pass # for loops cannot be empty, the pass statement to avoid getting an error
+
+```
