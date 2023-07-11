@@ -250,6 +250,10 @@ print(DataFrame_name[DataFrame_name["area"] > 8]])
 
 ## Boolean Operators
 
+### Comparison Operator
+
+Comparators works same way as in C.
+
 * ``` x > 5 and x < 15``` for AND operator.
 * ``` logical_and(x > 5, x < 15) ``` NumPy equivalent for AND.
 * ``` y > 1 or y < -5``` for OR operator.
@@ -262,6 +266,7 @@ Note: Once Pandas is created based on NumPy packet, it is possible to use the bo
 * ``` np.logical_and(DataFrame_name["area"] > 8], DataFrame_name["area"] < 100]) ```
 * ``` DataFrame_name[np.logical_and(DataFrame_name["area"] > 8], DataFrame_name["area"] < 100])] ```
 
+For strings, it gets according to alphabel: 'rafaela' < 'amanda' ? The answer is False.
 ## Conditional Operators
 
 ### if
@@ -302,7 +307,34 @@ else :
 	expression
 ```
 
-### Comparison Operators
+### While loop
 
-For strings, it gets according to alphabel: 'rafaela' < 'amanda' ? The answer is False.
-Comparators works same way as in C.
+```py
+while condition : 
+	espression
+
+error = 5
+while error > 1 :
+	error = error / 4
+	print(error)
+```
+
+### For loop
+
+```py
+for var in seq :
+	expression
+
+for index_name in list_name :
+	print(index_name) # Not list_name[index_name], prints content of index
+
+for index, index_name in enumerate(list_name) : 
+	print ("index " + str(index) + ": " + str(index_name)) # index 0: value
+
+# areas list
+areas = [11.25, 18.0, 20.0, 10.75, 9.50]
+
+# Change for loop to use enumerate() and update print()
+for a, area in enumerate(areas) :
+    print("room " + str(a) + ": " + str(area))
+```
