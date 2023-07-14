@@ -400,4 +400,7 @@ values = np.random.randint(-10,10,1000) # Lower limit, Upper limit, number of va
 
 print('Mean: ' + str(np.float64(np.mean(values)))) # It returns a <numpy.float64> type, then is converted to string
 print('Standard deviation: ' + str(np.float64(np.std(values)))) # Same as before
+
+## or to generate 100 random numbers - random() doesn't has param: number of values 
+random = [random.random() for _ in range(100)] # Returns a random float number between 0 and 1.
 ```
