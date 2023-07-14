@@ -384,6 +384,22 @@ fot x in range(4):
 	pass # for loops cannot be empty, the pass statement to avoid getting an error
 
 ```
+NOTE that for using the ```random()``` method several times I had to use ```[ expression for _ in range(100) ]```.
+
+```py
+random = [random.random() for _ in range(100)] # Returns a random float number between 0 and 1.
+```
+
+Now to use it, and make it run over all the elements in the array:
+
+```py
+# Calculate logarithm for each element in the array
+log_R1 = [math.log(x) for x in R1]  # R1 is a random variable with uniform distribution
+```
+
+log_R1 returns:
+
+![image](https://github.com/Rafaelatff/DataCamp-Intermediate-Python/assets/58916022/8f79d378-42b1-4a70-bde4-34e8450e1154)
 
 ## random
 
