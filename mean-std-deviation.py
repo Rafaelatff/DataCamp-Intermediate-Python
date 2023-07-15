@@ -90,7 +90,7 @@ x = np.linspace(np.mean(X) - 4 * np.std(X), np.mean(X) + 4 * np.std(X), 100)  # 
 y = norm.pdf(x, np.mean(X), np.std(X))
 
 plt.subplot(4,2,8)
-plt.twinx()
+plt.twinx() # To plot over the histogram, but with different scale for Y
 plt.plot(x, y, color='red', linewidth=2)
 
 plt.show()
