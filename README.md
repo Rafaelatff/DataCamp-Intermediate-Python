@@ -338,6 +338,45 @@ areas = [11.25, 18.0, 20.0, 10.75, 9.50]
 for a, area in enumerate(areas) :
     print("room " + str(a) + ": " + str(area))
 ```
+### Loop dictionary
+
+```py
+dict = { "key1":1,
+	"key2":2,
+	"key3":3 }
+for key, value in dict.items() : # it could be k, v
+	print(key + " - " + str(value)) # it doen't follow any order
+```
+
+### Loop Numpy Array 
+
+```py
+value = np.array([array1, array2])
+for val in value :
+	print(val)
+
+for val in np.nditer(value)
+	print(Val) # each value in each line, all the array1 and then array2
+```
+
+### Loop DataFrame
+
+```py
+DataFrame_name = pd.read_csv("csv_name.csv", index_col = 0)
+
+for label, row in DataFrame_name.iterrows():
+	print(label)
+	print(row)
+for label, row in DataFrame_name.iterrows():
+	print(label + ": " + row["column_name"])
+
+for label, row in DataFrame_name.iterrows():
+	 DataFrame_name.loc[label, "Lenght"] = len(row["column_name"])
+	 DataFrame_name.loc[lab, "COLUMN_NAME"] = row["column_name"].upper()
+
+DataFrame_name["Lenght"] = DataFrame_name["column_name"].apply(len) # returns the same as before
+DataFrame_name["COLUMN_NAME"] = DataFrame_name["column_name"].apply(str.upper)
+```
 
 ### More about the for loop
 
