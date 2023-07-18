@@ -445,7 +445,7 @@ log_R1 returns:
 There are a lot of methods to use within the random packet. Here are listed 3 that called my attention:
 
 * ```randrange()``` # Returns a random number between the given range.
-* ```randint()``` # Returns a random number between the given range.
+* ```randint()``` # Returns a random number between the given range -1.
 * ```random()``` # Returns a random float number between 0 and 1.
 
 ```py
@@ -458,4 +458,25 @@ print('Standard deviation: ' + str(np.float64(np.std(values)))) # Same as before
 
 ## or to generate 100 random numbers - random() doesn't has param: number of values 
 random = [random.random() for _ in range(100)] # Returns a random float number between 0 and 1.
+```
+
+More about random
+
+```py
+np.random.rand() # Pseudo-random numbers between 0 and 1
+np.random.seed(123) # Gives a seed for the random generator
+
+outcomes = [] # Initialize an empty list
+
+for x in range(10) :
+	value = np.random.randint(0,10)
+	outcomes.append(value)
+
+tails = [0]
+for x in range(10) : 
+	coin = np.random.randint(0,2)
+	tails.append(tails[x] + coin)
+
+        # Replace below: use max to make sure step can't go below 0
+        step = max(0, step -1)
 ```
